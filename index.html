@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+    <title>Gem Maze</title>
+  </head>
+  <body>
+    <header class="bar">
+      <a
+        class="back"
+        href="https://mike.pullen.dev/"
+        aria-label="Back to mike.pullen.dev"
+        >←</a
+      >
+      <p class="hud">
+        <span id="level">Level 1</span>
+        <span id="gems">💎 0/0</span>
+        <span id="clock">⏱ 0.0</span>
+      </p>
+      <div class="buttons">
+        <button type="button" id="mute-btn" aria-label="Mute sound">🔊</button>
+        <button type="button" id="pause-btn" aria-label="Pause">⏸</button>
+      </div>
+    </header>
+    <main class="stage">
+      <canvas id="game">
+        Collect every gem in the maze, then reach the exit.
+      </canvas>
+      <div id="overlay" class="overlay">
+        <h1 id="overlay-title">Gem Maze</h1>
+        <div id="overlay-body">
+          <p>
+            Collect every 💎 to unlock the exit, then escape as fast as you can.
+            The mazes get bigger, beetles start crawling around, and from level
+            6 the lights go out!
+          </p>
+          <ul class="help">
+            <li><b>Keys:</b> arrow keys or WASD (hold to keep moving)</li>
+            <li>
+              <b>Touch:</b> swipe to zoom down a hallway, or use the arrow pad
+            </li>
+            <li><b>Beetles:</b> bumping one costs you 5 seconds</li>
+            <li><b>Stars:</b> finish faster for more ⭐</li>
+          </ul>
+        </div>
+        <div class="actions">
+          <button type="button" id="start-btn" class="start">Start</button>
+          <button type="button" id="restart-btn" class="secondary" hidden>
+            Back to level 1
+          </button>
+        </div>
+      </div>
+    </main>
+    <nav id="pad" class="pad" aria-label="Arrow pad">
+      <button type="button" data-dir="up" aria-label="Up">▲</button>
+      <button type="button" data-dir="left" aria-label="Left">◀</button>
+      <button type="button" data-dir="down" aria-label="Down">▼</button>
+      <button type="button" data-dir="right" aria-label="Right">▶</button>
+    </nav>
+    <script src="game.js"></script>
+  </body>
+</html>

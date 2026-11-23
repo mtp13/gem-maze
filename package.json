@@ -1,0 +1,17 @@
+{
+  "name": "gem-maze",
+  "version": "1.0.0",
+  "description": "Collect every gem to unlock the exit, dodge the beetles and escape fast for three stars.",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint:html": "html-validate index.html",
+    "lint": "npm run format:check && npm run lint:html"
+  },
+  "devDependencies": {
+    "html-validate": "11.16.4",
+    "prettier": "3.9.10"
+  }
+}
